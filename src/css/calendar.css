@@ -1,0 +1,127 @@
+/* Estilos para el calendario */
+.calendar {
+    background-color: white;
+    padding: 20px;
+  }
+  
+  .table-calendar {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table-calendar th,
+  .table-calendar td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .table-calendar th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  
+  /* Estilos para las horas en la primera columna */
+  .table-calendar td:first-child {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  
+  /* Ajusta el ancho de la primera columna (horas) */
+  .table-calendar td:first-child {
+    width: 70px;
+  }
+  
+  /* Ajusta el ancho de las celdas de días */
+  .table-calendar th:not(:first-child),
+  .table-calendar td:not(:first-child) {
+    width: calc((100% - 70px) / 7); /* Divide el espacio restante entre los 7 días */
+  }
+  
+
+  
+  /* Estilos para la cabecera */
+  .header {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    position: relative;
+  }
+  
+  /* Estilos para la opción de selección */
+  .opcion-seleccion {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    cursor: pointer;
+    color: white;
+    background-color: red; /* Color de fondo del rectángulo de selección */
+    padding: 5px 10px; /* Espacio alrededor del texto "Seleccionar" */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  .opciones {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: red;
+    border: 1px solid #ddd;
+    padding: 5px;
+    z-index: 1;
+  }
+  
+  .opcion {
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Mostrar las opciones al pasar el ratón sobre la opción de selección */
+  .opcion-seleccion:hover .opciones {
+    display: block;
+  }
+  
+  /* Estilos para el calendario */
+  .calendar {
+    background-color: white;
+    padding: 0px;
+  }
+  
+  /* Estilos para el encabezado del calendario */
+  .calendar-header {
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Estilos para el texto "Semana" */
+  .week-header {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* Estilos para las opciones de selección */
+  .options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Estilos para cada opción de selección */
+  .option {
+    background-color: darkred;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para las opciones de selección al pasar el mouse */
+  .option:hover {
+    background-color: crimson;
+  }
+  

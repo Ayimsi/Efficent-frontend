@@ -1,0 +1,62 @@
+/* Estilos específicos para la página de inicio de sesión (login.css) */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.content-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid red; /* Borde rojo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el cuadrado con enlace a Efficents */
+.square-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.link-text {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}

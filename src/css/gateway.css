@@ -1,0 +1,20 @@
+.gateway {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.header, .footer {
+  background-color: #464775;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
