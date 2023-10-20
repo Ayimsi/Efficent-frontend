@@ -7,13 +7,14 @@ import Login from './components/login';
 import Register from './components/register';
 import Gateway from './components/gateway';
 import Calendar from './components/calendar';
-import Square from './components/square';
+import Profile from './components/Profile';
+
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/square' element={<Square/>} /> 
+        <Route path='/profile'element={<Profile/>} />
         <Route path="/" element={<Home/>} />
         <Route path="/filing" element={<Filing/>} />
         <Route path="/login" element={<Login/>} />

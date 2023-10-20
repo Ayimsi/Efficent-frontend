@@ -31,9 +31,7 @@ const Home = () => {
         </h1>
       </div>
 
-      <div className="content">
-        <p>Aquí puedes agregar el contenido principal de tu página.</p>
-      </div>
+
     </div>
   );
 }
