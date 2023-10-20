@@ -1,20 +1,72 @@
-.gateway {
+.gateway-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   height: 100vh;
 }
 
-.header, .footer {
-  background-color: #464775;
-  color: white;
-  padding: 20px;
+.sidebar {
+  width: 0;
+  height: 100%;
+  background-color: #f70000;
+  position: fixed;
+  transition: width 0.5s;
+  overflow: hidden;
+}
+
+.sidebar.visible {
+  width: 50px;
+}
+
+.icon img {
+  display: block;
+  margin: 0 auto;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
   text-align: center;
 }
 
-.main {
-  flex-grow: 1;
+.header-text h1 {
+  font-size: 2rem;
+}
+
+.header-text p {
+  font-size: 1rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.info {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.info-box {
+  text-align: left;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin-top: 20px;
 }
