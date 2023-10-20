@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import '../css/calendar.css';
 import Gateway from './gateway';
+import '../home/home.css';
 
 const CellPopup = ({ onClose }) => {
   return (
@@ -41,7 +42,7 @@ const Calendar = () => {
 
   return (
     <div className="calendar">
-      <div className="calendar-header">
+      <div className="header">
         <div className="week-header">
           <h1>Semana</h1>
         </div>
@@ -55,28 +56,40 @@ const Calendar = () => {
           </div>
         </div>
       </div>
-      <Gateway />
-      <table className="table-calendar">
-        <thead>
-          <tr>
-            <th></th>
-            {daysOfWeek.map((day) => (
-              <th key={day}>{day}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {hoursOfDay.map((hour) => (
-            <tr key={hour}>
-              <td>{hour}</td>
+      <div className="calendarRow">
+        <Gateway />
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            display: 'flex'
+          }}
+        >
+          <table className="table-calendar">
+          <thead>
+            <tr>
+              <th></th>
               {daysOfWeek.map((day) => (
-                <td key={`${day}-${hour}`} className="cell" onClick={() => openCellPopup(`${day}-${hour}`)}>
-                </td>
+                <th key={day}>{day}</th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {hoursOfDay.map((hour) => (
+              <tr key={hour}>
+                <td>{hour}</td>
+                {daysOfWeek.map((day) => (
+                  <td key={`${day}-${hour}`} className="cell" onClick={() => openCellPopup(`${day}-${hour}`)}>
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        </div>
+        
+      </div>
+
       {selectedCell && (
         <div className="cell-popup-container">
           <CellPopup onClose={closeCellPopup} />

@@ -8,12 +8,19 @@ import Register from './components/register';
 import Gateway from './components/gateway';
 import Calendar from './components/calendar';
 import Profile from './components/Profile';
+import Forum from './components/forum';
 
 
 function App() {
   return (
-    <Router>
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh"
+      }}>
+        <Router>
       <Routes>
+        <Route path='/forum'element={<Forum/>} />
         <Route path='/profile'element={<Profile/>} />
         <Route path="/" element={<Home/>} />
         <Route path="/filing" element={<Filing/>} />
@@ -23,6 +30,8 @@ function App() {
         <Route path='/calendar'element={<Calendar />} />
       </Routes>
     </Router>
+    </div>
+    
   );
 }
 

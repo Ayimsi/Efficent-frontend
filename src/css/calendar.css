@@ -1,19 +1,52 @@
+/*calendar.css*/
+
+/* Estilos para la cabecera con fondo rojo */
+.header {
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 20px; /* Cambia el valor según tus necesidades */
+  position: relative;
+}
+
+
 /* Estilos para el calendario */
 .calendar {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* padding: 20px; */
+}
+.calendarRow{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.calendar-header{
   padding: 20px;
 }
 
 .table-calendar {
   border-collapse: collapse;
   width: 100%;
+  
+  height: -webkit-fill-available;
+  z-index: 1;
+  margin-left: 10px;
 }
 
 .table-calendar th,
 .table-calendar td {
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
+}
+
+
+.table-calendar tr{
+  height: calc((100% - 50px) / 25);
 }
 
 .table-calendar th {
@@ -32,15 +65,6 @@
 .table-calendar th:not(:first-child),
 .table-calendar td:not(:first-child) {
   width: calc((100% - 70px) / 7); /* Divide el espacio restante entre los 7 días */
-}
-
-/* Estilos para la cabecera */
-.header {
-  background-color: red;
-  color: white;
-  text-align: center;
-  padding: 50px;
-  position: relative;
 }
 
 /* Estilos para la opción de selección */

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/profile.css';
 import Gateway from './gateway';
+import icono2 from '../assets/icono2.png';
 
 
 const Profile = () => {
@@ -13,6 +14,18 @@ const Profile = () => {
   const [newInterest, setNewInterest] = useState('');
 
   const handleSave = () => {
+    // Validación de correo electrónico
+    if (!isValidEmail(email)) {
+      alert("El correo electrónico es inválido");
+      return;
+    }
+
+    // Validación de contenido inapropiado en el nombre
+    if (containsInappropriateContent(userName)) {
+      alert("El nombre contiene contenido inapropiado");
+      return;
+    }
+
     setIsEditing(false);
   };
 
@@ -23,10 +36,38 @@ const Profile = () => {
     }
   };
 
+  // Función para validar el formato del correo electrónico
+  const isValidEmail = (email) => {
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    return emailRegex.test(email);
+  };
+
+  // Función para verificar contenido inapropiado en el nombre
+  const containsInappropriateContent = (name) => {
+    // Define aquí tu lista de palabras o patrones inapropiados que deseas detectar
+    const inappropriateContent = ["palabra1", "palabra2", "otrapalabra"];
+    const nameInLowerCase = name.toLowerCase();
+
+    for (const word of inappropriateContent) {
+      if (nameInLowerCase.includes(word)) {
+        return true;
+      }
+    }
+
+    return false;
+  };
+
   return (
     <div className="profile">
       <div className="profile-container">
         <div className="profile-header">
+          <div className="profile-picture">
+            <img
+              src={icono2}
+              alt="Foto de perfil"
+              className="profile-image"
+            />
+          </div>
           <div className="profile-info">
             {isEditing ? (
               <>
@@ -103,7 +144,6 @@ const Profile = () => {
       </div>
       <Gateway />
     </div>
-    
   );
 };
 
