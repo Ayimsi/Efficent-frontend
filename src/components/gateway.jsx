@@ -46,8 +46,8 @@ const Gateway = () => {
 
 const Icono = ({ imagen }) => {
   const estiloIcono = {
-    width: '30px',
-    height: '30px',
+    width: '40px',
+    height: '40px',
     backgroundColor:"#f70000"
   };
 

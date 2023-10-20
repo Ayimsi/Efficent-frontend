@@ -3,7 +3,7 @@
 .gateway-container.collapsed {
   display: flex;
   height: 100%;
-  width: 5px;
+  width: 10px;
   transition: width 0.5s;
   background-color: hsl(0, 100%, 48%);
 }
@@ -16,7 +16,7 @@
   gap: 15px;
   height: 100%;
   width: 70px;
-  transition: width 0.5s;
+  transition: width 2s;
   background-color: #f70000;
 }
 /* 
